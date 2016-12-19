@@ -31,7 +31,7 @@ def convert():
 
     with open(opt.o, 'w+') as f:
         rows = []
-	default = 'dump-0%s.csv' % str(len(glob.glob1('./',"*.kismet.csv")))
+	default = 'dump-%s.csv' % str(len(glob.glob1('./',"*.kismet.csv"))).zfill(2)
 	print(default)
         for row in parse(default):
             # mash in vendor details
